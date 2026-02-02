@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Invitation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 300px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .yes {
+            background: #4CAF50;
+            color: white;
+        }
+
+        .no {
+            background: #f44336;
+            color: white;
+        }
+
+        #thankYou {
+            display: none;
+            color: green;
+            font-size: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h2>You're Invited 🎉</h2>
+    <p>Kya aap hamara invitation accept karte ho?</p>
+
+    <button class="yes" onclick="acceptInvite()">Yes</button>
+    <button class="no" onclick="declineInvite()">No</button>
+
+    <div id="thankYou">Thank You for Accepting ❤️</div>
+</div>
+
+<script>
+    function acceptInvite() {
+        document.getElementById("thankYou").style.display = "block";
+    }
+
+    function declineInvite() {
+        alert("Koi baat nahi 😊");
+    }
+</script>
+
+</body>
+</html>
